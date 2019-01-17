@@ -8,9 +8,9 @@
         </Bindings>
       </Site>
     </Sites>
-    <Startup>
-      <!--<Task commandLine="startup.cmd" executionContext="elevated" taskType="simple"/>2-->
-    </Startup>
+    <!--<Startup>
+      <Task commandLine="startup.cmd" executionContext="elevated" taskType="simple"/>2
+    </Startup>-->
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
