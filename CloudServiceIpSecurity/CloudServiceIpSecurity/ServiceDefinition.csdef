@@ -8,11 +8,12 @@
         </Bindings>
       </Site>
     </Sites>
-    <!--<Startup>
-      <Task commandLine="startup.cmd" executionContext="elevated" taskType="simple"/>2
-    </Startup>-->
+    <Startup>
+      <Task commandLine="startup.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
     </ConfigurationSettings>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />

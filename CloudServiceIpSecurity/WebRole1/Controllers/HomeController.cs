@@ -19,12 +19,13 @@ namespace WebRole1.Controllers
             ViewBag.Message = "Your application description page.";
             using (ServerManager serverManager = new ServerManager())
             {
-                Configuration config = serverManager.GetWebConfiguration("MvcWebRole1");
+                //Configuration config = serverManager.GetWebConfiguration("MvcWebRole1");
+                Configuration config = serverManager.GetWebConfiguration("Default Web Site","WebRole1");
                 ConfigurationSection ipSecuritySection = config.GetSection("system.webServer/security/ipSecurity");
                 ConfigurationElementCollection ipSecurityCollection = ipSecuritySection.GetCollection();
 
                 ConfigurationElement addElement = ipSecurityCollection.CreateElement("add");
-                addElement["ipAddress"] = @"10.10.10.1";
+                addElement["ipAddress"] = @"30.30.32.1";
                 addElement["allowed"] = true;
                 ipSecurityCollection.Add(addElement);
 
